@@ -44,12 +44,15 @@ namespace testuidoang
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            FormAdmin Admin = new FormAdmin(); Admin.Show();
+            FormAdmin Admin = new FormAdmin();
+            Admin.Show();
+            this.Hide();
         }
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            
+            FormAnggota Anggota = new FormAnggota(); Anggota.Show();
+            this.Hide();
         }
     }
 }

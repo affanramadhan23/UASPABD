@@ -41,5 +41,12 @@ namespace testuidoang
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            formUtama fu = new formUtama();
+            fu.Show();
+            this.Hide();
+        }
     }
 }
