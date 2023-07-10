@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace testuidoang
 {
-    public partial class Form1 : Form
+    public partial class FormAnggota : Form
     {
-        public Form1()
+        public FormAnggota()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void FormAnggota_Load(object sender, EventArgs e)
         {
 
         }
@@ -32,17 +27,17 @@ namespace testuidoang
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
 
         }

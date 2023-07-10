@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace testuidoang
 {
-    public partial class Form2 : Form
+    public partial class FormAdmin : Form
     {
-        public Form2()
+        public FormAdmin()
         {
             InitializeComponent();
+        }
+
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
