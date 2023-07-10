@@ -21,5 +21,12 @@ namespace testuidoang
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            formUtama fu = new formUtama();
+            fu.Show();
+            this.Hide();
+        }
     }
 }
