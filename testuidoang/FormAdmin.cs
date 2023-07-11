@@ -35,5 +35,12 @@ namespace testuidoang
             fp.Show();
             this.Hide();
         }
+
+        private void btnAnggota_Click(object sender, EventArgs e)
+        {
+            AdmnAnggota AA = new AdmnAnggota();
+            AA.Show();
+            this.Hide();
+        }
     }
 }

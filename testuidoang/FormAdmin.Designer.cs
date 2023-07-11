@@ -59,17 +59,18 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(92, 151);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(195, 55);
             this.button2.TabIndex = 2;
             this.button2.Text = "Anggota";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnAnggota_Click);
             // 
             // btnBuku
             // 
             this.btnBuku.Location = new System.Drawing.Point(493, 151);
-            this.btnBuku.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuku.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuku.Name = "btnBuku";
             this.btnBuku.Size = new System.Drawing.Size(195, 55);
             this.btnBuku.TabIndex = 3;

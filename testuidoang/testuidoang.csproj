@@ -58,11 +58,11 @@
     <Compile Include="FormPengisianDataBuku.Designer.cs">
       <DependentUpon>FormPengisianDataBuku.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRead.cs">
+    <Compile Include="AdmnAnggota.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRead.Designer.cs">
-      <DependentUpon>FormRead.cs</DependentUpon>
+    <Compile Include="AdmnAnggota.Designer.cs">
+      <DependentUpon>AdmnAnggota.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUpdate.cs">
       <SubType>Form</SubType>
@@ -84,6 +84,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdmnAnggota.resx">
+      <DependentUpon>AdmnAnggota.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>

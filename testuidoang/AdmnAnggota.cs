@@ -8,15 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace testuidoang
 {
-    public partial class FormAnggota : Form
+    public partial class AdmnAnggota : Form
     {
         private string stringConnection = "data source=LAPTOP-C3M8HP9E\\KURANGTAU;" + "database=perpustakaan`; user ID=sa;Password=affancool23";
         private SqlConnection koneksi;
-
+        public AdmnAnggota()
+        {
+            InitializeComponent();
+        }
         private void refreshform()
         {
             txtid.Text = "";
@@ -34,13 +37,6 @@ namespace testuidoang
 
         }
 
-
-        public FormAnggota()
-        {
-            InitializeComponent();
-            koneksi = new SqlConnection(stringConnection);  
-        }
-
         private void dataGridView()
         {
             koneksi.Open();
@@ -52,26 +48,14 @@ namespace testuidoang
             koneksi.Close();
         }
 
-
-
-        private void FormAnggota_Load(object sender, EventArgs e)
+        private void txtid_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
+            refreshform();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -120,14 +104,71 @@ namespace testuidoang
                 dataGridView();
                 refreshform();
             }
+        }
+
+        private void txtAlamat_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNama_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtjk_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            formUtama fu = new formUtama();
-            fu.Show();
+            FormAdmin fa = new FormAdmin();
+            fa.Show();
             this.Hide();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            koneksi.Open();
+            string queryString = "Update dbo.Anggota set Nama='" + txtNama.Text + "', Jenis_kelamin='" + txtjk.Text + "', No_Telp='" + txtTelp.Text + "',Alamat='" + txtAlamat.Text + "'where Id_Buku='" + txtid.Text + "'";
+            SqlCommand cmd = new SqlCommand(queryString, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Update Data Berhasil");
+            dataGridView();
+            refreshform();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -135,15 +176,26 @@ namespace testuidoang
 
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Yakin Ingin Menghapus Data : " + txtid.Text + " ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                koneksi.Open();
+                string queryString = "Delete dbo.Anggota where Id_Anggota='" + txtid.Text + "'";
+                SqlCommand cmd = new SqlCommand(queryString, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+                koneksi.Close();
+                MessageBox.Show("Hapus Data Berhasil");
+                dataGridView();
+                refreshform();
+            }
+        }
+
         private void btnOpen_Click(object sender, EventArgs e)
         {
             dataGridView();
             btnOpen.Enabled = false;
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            refreshform();
         }
     }
 }
