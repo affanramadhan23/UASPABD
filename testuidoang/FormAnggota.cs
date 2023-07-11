@@ -38,6 +38,7 @@ namespace testuidoang
         public FormAnggota()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);  
         }
 
         private void dataGridView()
@@ -138,6 +139,11 @@ namespace testuidoang
         {
             dataGridView();
             btnOpen.Enabled = false;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
