@@ -17,10 +17,41 @@ namespace testuidoang
         private string stringConnection = "data source=LAPTOP-C3M8HP9E\\KURANGTAU;" + "database=perpustakaan`; user ID=sa;Password=affancool23";
         private SqlConnection koneksi;
 
+        private void refreshform()
+        {
+            txtid.Text = "";
+            txtNama.Text = "";
+            txtjk.Text = "";
+            txtTelp.Text = "";
+            txtAlamat.Text = "";
+            txtid.Enabled = false;
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
+            txtAlamat.Enabled = false;
+            txtjk.Enabled = false;
+            txtNama.Enabled = false;
+            txtTelp.Enabled = false;
+
+        }
+
+
         public FormAnggota()
         {
             InitializeComponent();
         }
+
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string query = "SELECT Id_Anggota, Nama_Anggota, Jenis_Kelamin, No_Telp, Alamat FROM dbo.Anggota";
+            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            koneksi.Close();
+        }
+
+
 
         private void FormAnggota_Load(object sender, EventArgs e)
         {
@@ -44,6 +75,50 @@ namespace testuidoang
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string idanggota = txtid.Text;
+            string nmanggota = txtNama.Text;
+            string jk = txtjk.Text;
+            string notelp = txtTelp.Text;
+            string Alamat = txtAlamat.Text;
+
+            if (idanggota == "")
+            {
+                MessageBox.Show("Masukkan Id Anggota", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (nmanggota == "")
+            {
+                MessageBox.Show("Masukkan Nama Anggota", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (jk == "")
+            {
+                MessageBox.Show("Masukkan Jenis Kelamin", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (notelp == "")
+            {
+                MessageBox.Show("Masukkan No Telepon", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (Alamat == "")
+            {
+                MessageBox.Show("Masukkan Alamat", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "INSERT INTO Suplier (Id_Anggota, Nama_Anggota, Jenis_Kelamin, No_Telp, Alamat) VALUES (@Id_Anggota, @Nama_Anggota, @Jenis_Kelamin, @No_Telp, @Alamat)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@Id_Anggota", idanggota));
+                cmd.Parameters.Add(new SqlParameter("@Nama_Anggota", nmanggota));
+                cmd.Parameters.Add(new SqlParameter("@Jenis_Kelamin", jk));
+                cmd.Parameters.Add(new SqlParameter("@No_Telp", notelp));
+                cmd.Parameters.Add(new SqlParameter("@Alamat", Alamat));
+                cmd.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
+            }
 
         }
 
@@ -52,6 +127,11 @@ namespace testuidoang
             formUtama fu = new formUtama();
             fu.Show();
             this.Hide();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
