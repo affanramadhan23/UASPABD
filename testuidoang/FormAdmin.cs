@@ -28,5 +28,12 @@ namespace testuidoang
             fu.Show();
             this.Hide();
         }
+
+        private void btnBuku_Click(object sender, EventArgs e)
+        {
+            FormPengisianDataBuku fp = new FormPengisianDataBuku();
+            fp.Show();
+            this.Hide();
+        }
     }
 }
