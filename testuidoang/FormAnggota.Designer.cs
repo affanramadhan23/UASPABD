@@ -41,15 +41,12 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.txtjk = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnOpen = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 74);
+            this.label1.Location = new System.Drawing.Point(502, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 0;
@@ -58,24 +55,24 @@
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(144, 71);
+            this.txtid.Location = new System.Drawing.Point(598, 109);
             this.txtid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(285, 22);
+            this.txtid.Size = new System.Drawing.Size(309, 22);
             this.txtid.TabIndex = 1;
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(144, 117);
+            this.txtNama.Location = new System.Drawing.Point(598, 155);
             this.txtNama.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(459, 22);
+            this.txtNama.Size = new System.Drawing.Size(483, 22);
             this.txtNama.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 123);
+            this.label2.Location = new System.Drawing.Point(502, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 2;
@@ -85,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 164);
+            this.label3.Location = new System.Drawing.Point(502, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 16);
             this.label3.TabIndex = 4;
@@ -93,16 +90,16 @@
             // 
             // txtTelp
             // 
-            this.txtTelp.Location = new System.Drawing.Point(144, 212);
+            this.txtTelp.Location = new System.Drawing.Point(598, 250);
             this.txtTelp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelp.Name = "txtTelp";
-            this.txtTelp.Size = new System.Drawing.Size(459, 22);
+            this.txtTelp.Size = new System.Drawing.Size(483, 22);
             this.txtTelp.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 212);
+            this.label4.Location = new System.Drawing.Point(502, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 16);
             this.label4.TabIndex = 6;
@@ -110,16 +107,16 @@
             // 
             // txtAlamat
             // 
-            this.txtAlamat.Location = new System.Drawing.Point(144, 262);
+            this.txtAlamat.Location = new System.Drawing.Point(598, 300);
             this.txtAlamat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAlamat.Name = "txtAlamat";
-            this.txtAlamat.Size = new System.Drawing.Size(459, 22);
+            this.txtAlamat.Size = new System.Drawing.Size(483, 22);
             this.txtAlamat.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 262);
+            this.label5.Location = new System.Drawing.Point(502, 300);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 16);
             this.label5.TabIndex = 8;
@@ -128,10 +125,10 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(156, 322);
+            this.btnSave.Location = new System.Drawing.Point(610, 360);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(112, 39);
+            this.btnSave.Size = new System.Drawing.Size(136, 44);
             this.btnSave.TabIndex = 11;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -139,10 +136,10 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(419, 322);
+            this.btnClear.Location = new System.Drawing.Point(873, 360);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(117, 39);
+            this.btnClear.Size = new System.Drawing.Size(141, 44);
             this.btnClear.TabIndex = 12;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -153,7 +150,7 @@
             this.btnBack.Location = new System.Drawing.Point(17, 12);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(138, 60);
             this.btnBack.TabIndex = 13;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -161,41 +158,18 @@
             // 
             // txtjk
             // 
-            this.txtjk.Location = new System.Drawing.Point(144, 161);
+            this.txtjk.Location = new System.Drawing.Point(598, 199);
             this.txtjk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtjk.Name = "txtjk";
-            this.txtjk.Size = new System.Drawing.Size(153, 22);
+            this.txtjk.Size = new System.Drawing.Size(177, 22);
             this.txtjk.TabIndex = 14;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(716, 31);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(843, 367);
-            this.dataGridView1.TabIndex = 15;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.Location = new System.Drawing.Point(1084, 428);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(117, 39);
-            this.btnOpen.TabIndex = 16;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // FormAnggota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1616, 564);
-            this.Controls.Add(this.btnOpen);
-            this.Controls.Add(this.dataGridView1);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1396, 564);
             this.Controls.Add(this.txtjk);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
@@ -213,7 +187,6 @@
             this.Name = "FormAnggota";
             this.Text = "FormAnggota";
             this.Load += new System.EventHandler(this.FormAnggota_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,7 +207,5 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtjk;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnOpen;
     }
 }
