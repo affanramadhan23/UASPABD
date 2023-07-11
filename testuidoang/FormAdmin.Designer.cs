@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnBuku = new System.Windows.Forms.Button();
+            this.btnPegawai = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -78,11 +79,24 @@
             this.btnBuku.UseVisualStyleBackColor = true;
             this.btnBuku.Click += new System.EventHandler(this.btnBuku_Click);
             // 
+            // btnPegawai
+            // 
+            this.btnPegawai.Location = new System.Drawing.Point(288, 363);
+            this.btnPegawai.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPegawai.Name = "btnPegawai";
+            this.btnPegawai.Size = new System.Drawing.Size(195, 55);
+            this.btnPegawai.TabIndex = 4;
+            this.btnPegawai.Text = "Data Pegawai";
+            this.btnPegawai.UseVisualStyleBackColor = true;
+            this.btnPegawai.Click += new System.EventHandler(this.btnPegawai_Click);
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPegawai);
             this.Controls.Add(this.btnBuku);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -102,5 +116,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnBuku;
+        private System.Windows.Forms.Button btnPegawai;
     }
 }

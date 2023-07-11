@@ -64,11 +64,11 @@
     <Compile Include="AdmnAnggota.Designer.cs">
       <DependentUpon>AdmnAnggota.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUpdate.cs">
+    <Compile Include="FormPegawai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUpdate.Designer.cs">
-      <DependentUpon>FormUpdate.cs</DependentUpon>
+    <Compile Include="FormPegawai.Designer.cs">
+      <DependentUpon>FormPegawai.cs</DependentUpon>
     </Compile>
     <Compile Include="formUtama.cs">
       <SubType>Form</SubType>
@@ -92,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAnggota.resx">
       <DependentUpon>FormAnggota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawai.resx">
+      <DependentUpon>FormPegawai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPengisianDataBuku.resx">
       <DependentUpon>FormPengisianDataBuku.cs</DependentUpon>

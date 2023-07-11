@@ -38,7 +38,8 @@
             // 
             this.btnAdmin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdmin.BackColor = System.Drawing.Color.Silver;
-            this.btnAdmin.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin.ForeColor = System.Drawing.Color.Black;
             this.btnAdmin.Location = new System.Drawing.Point(501, 525);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(175, 67);
@@ -51,6 +52,7 @@
             // 
             this.btnAnggota.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAnggota.BackColor = System.Drawing.Color.Silver;
+            this.btnAnggota.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAnggota.Location = new System.Drawing.Point(947, 525);
             this.btnAnggota.Name = "btnAnggota";
             this.btnAnggota.Size = new System.Drawing.Size(175, 67);

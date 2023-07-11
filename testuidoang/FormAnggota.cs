@@ -14,7 +14,7 @@ namespace testuidoang
 {
     public partial class FormAnggota : Form
     {
-        private string stringConnection = "data source=LAPTOP-C3M8HP9E\\KURANGTAU;" + "database=perpustakaan`; user ID=sa;Password=affancool23";
+        private string stringConnection = "data source=LAPTOP-C3M8HP9E\\KURANGTAU;" + "database=Perpustakaan`; user ID=sa;Password=affancool23";
         private SqlConnection koneksi;
 
         private void refreshform()
@@ -40,19 +40,6 @@ namespace testuidoang
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);  
         }
-
-        private void dataGridView()
-        {
-            koneksi.Open();
-            string query = "SELECT Id_Anggota, Nama_Anggota, Jenis_Kelamin, No_Telp, Alamat FROM dbo.Anggota";
-            SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-            koneksi.Close();
-        }
-
-
 
         private void FormAnggota_Load(object sender, EventArgs e)
         {
@@ -117,7 +104,6 @@ namespace testuidoang
 
                 koneksi.Close();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataGridView();
                 refreshform();
             }
 
@@ -133,12 +119,6 @@ namespace testuidoang
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-            dataGridView();
-            btnOpen.Enabled = false;
         }
 
         private void btnClear_Click(object sender, EventArgs e)

@@ -42,5 +42,12 @@ namespace testuidoang
             AA.Show();
             this.Hide();
         }
+
+        private void btnPegawai_Click(object sender, EventArgs e)
+        {
+            FormPegawai fpe = new FormPegawai();
+            fpe.Show();
+            this.Hide();
+        }
     }
 }
