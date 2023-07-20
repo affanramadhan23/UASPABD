@@ -52,6 +52,7 @@
             this.btnData.TabIndex = 1;
             this.btnData.Text = "Open Data";
             this.btnData.UseVisualStyleBackColor = true;
+            this.btnData.Click += new System.EventHandler(this.btnData_Click);
             // 
             // FormPegawai
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtjk = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtAlamat = new System.Windows.Forms.TextBox();
@@ -45,7 +46,12 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnOpen = new System.Windows.Forms.Button();
+            this.perpustakaanDataSet = new testuidoang.PerpustakaanDataSet();
+            this.anggotaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.anggotaTableAdapter = new testuidoang.PerpustakaanDataSetTableAdapters.AnggotaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perpustakaanDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anggotaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtjk
@@ -219,6 +225,20 @@
             this.btnOpen.UseVisualStyleBackColor = true;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
+            // perpustakaanDataSet
+            // 
+            this.perpustakaanDataSet.DataSetName = "PerpustakaanDataSet";
+            this.perpustakaanDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // anggotaBindingSource
+            // 
+            this.anggotaBindingSource.DataMember = "Anggota";
+            this.anggotaBindingSource.DataSource = this.perpustakaanDataSet;
+            // 
+            // anggotaTableAdapter
+            // 
+            this.anggotaTableAdapter.ClearBeforeFill = true;
+            // 
             // AdmnAnggota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -243,7 +263,10 @@
             this.Controls.Add(this.label1);
             this.Name = "AdmnAnggota";
             this.Text = "Admin - Anggota";
+            this.Load += new System.EventHandler(this.AdmnAnggota_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perpustakaanDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anggotaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,5 +291,8 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnOpen;
+        private PerpustakaanDataSet perpustakaanDataSet;
+        private System.Windows.Forms.BindingSource anggotaBindingSource;
+        private PerpustakaanDataSetTableAdapters.AnggotaTableAdapter anggotaTableAdapter;
     }
 }

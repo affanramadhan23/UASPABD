@@ -76,11 +76,16 @@
     <Compile Include="formUtama.Designer.cs">
       <DependentUpon>formUtama.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAnggota.cs">
+    <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAnggota.Designer.cs">
-      <DependentUpon>FormAnggota.cs</DependentUpon>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerpustakaanDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PerpustakaanDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,9 +95,6 @@
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAnggota.resx">
-      <DependentUpon>FormAnggota.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormPegawai.resx">
       <DependentUpon>FormPegawai.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formUtama.resx">
       <DependentUpon>formUtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -112,6 +117,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="PerpustakaanDataSet.xsc">
+      <DependentUpon>PerpustakaanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PerpustakaanDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PerpustakaanDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PerpustakaanDataSet.xss">
+      <DependentUpon>PerpustakaanDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -14,7 +14,7 @@ namespace testuidoang
 {
     public partial class FormPengisianDataBuku : Form
     {
-        private string stringConnection = "data source=LAPTOP-C3M8HP9E\\KURANGTAU;" + "database=Perpustakaan`; user ID=sa;Password=affancool23";
+        private string stringConnection = "data source=LAPTOP-C3M8HP9E\\KURANGTAU;" + "database=Perpustakaan; user ID=sa;Password=affancool23";
         private SqlConnection koneksi;
 
         private void refreshform()

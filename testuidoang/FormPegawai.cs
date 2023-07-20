@@ -14,17 +14,18 @@ namespace testuidoang
 {
     public partial class FormPegawai : Form
     {
-        private string stringConnection = "data source=LAPTOP-C3M8HP9E\\KURANGTAU;" + "database=Perpustakaan`; user ID=sa;Password=affancool23";
+        private string stringConnection = "data source=LAPTOP-C3M8HP9E\\KURANGTAU;" + "database=Perpustakaan; user ID=sa;Password=affancool23";
         private SqlConnection koneksi;
         public FormPegawai()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
         }
 
         private void dataGridView()
         {
             koneksi.Open();
-            string query = "SELECT * form dbo.Pegawai";
+            string query = "SELECT Id_Pegawai, Nama_Pegawai, Jenis_Kelamin, No_Telp FROM dbo.Pegawai";
             SqlDataAdapter da = new SqlDataAdapter(query, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -37,6 +38,10 @@ namespace testuidoang
 
         }
 
-
+        private void btnData_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnData.Enabled = false;
+        }
     }
 }

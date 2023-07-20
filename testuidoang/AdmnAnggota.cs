@@ -14,11 +14,12 @@ namespace testuidoang
 {
     public partial class AdmnAnggota : Form
     {
-        private string stringConnection = "data source=LAPTOP-C3M8HP9E\\KURANGTAU;" + "database=Perpustakaan`; user ID=sa;Password=affancool23";
+        private string stringConnection = "data source=LAPTOP-C3M8HP9E\\KURANGTAU;" + "database=Perpustakaan; user ID=sa;Password=affancool23";
         private SqlConnection koneksi;
         public AdmnAnggota()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
         }
         private void refreshform()
         {
@@ -89,7 +90,7 @@ namespace testuidoang
             else
             {
                 koneksi.Open();
-                string str = "INSERT INTO Suplier (Id_Anggota, Nama_Anggota, Jenis_Kelamin, No_Telp, Alamat) VALUES (@Id_Anggota, @Nama_Anggota, @Jenis_Kelamin, @No_Telp, @Alamat)";
+                string str = "INSERT INTO Anggota (Id_Anggota, Nama_Anggota, Jenis_Kelamin, No_Telp, Alamat) VALUES (@Id_Anggota, @Nama_Anggota, @Jenis_Kelamin, @No_Telp, @Alamat)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add(new SqlParameter("@Id_Anggota", idanggota));
@@ -102,7 +103,6 @@ namespace testuidoang
                 koneksi.Close();
                 MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dataGridView();
-                refreshform();
             }
         }
 
@@ -161,7 +161,7 @@ namespace testuidoang
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             koneksi.Open();
-            string queryString = "Update dbo.Anggota set Nama='" + txtNama.Text + "', Jenis_kelamin='" + txtjk.Text + "', No_Telp='" + txtTelp.Text + "',Alamat='" + txtAlamat.Text + "'where Id_Buku='" + txtid.Text + "'";
+            string queryString = "Update dbo.Anggota set Nama_Anggota='" + txtNama.Text + "', Jenis_kelamin='" + txtjk.Text + "', No_Telp='" + txtTelp.Text + "',Alamat='" + txtAlamat.Text + "'where Id_Anggota='" + txtid.Text + "'";
             SqlCommand cmd = new SqlCommand(queryString, koneksi);
             cmd.CommandType = CommandType.Text;
             cmd.ExecuteNonQuery();
@@ -178,17 +178,39 @@ namespace testuidoang
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Yakin Ingin Menghapus Data : " + txtid.Text + " ?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (dataGridView1.SelectedRows.Count == 0)
             {
-                koneksi.Open();
-                string queryString = "Delete dbo.Anggota where Id_Anggota='" + txtid.Text + "'";
-                SqlCommand cmd = new SqlCommand(queryString, koneksi);
-                cmd.CommandType = CommandType.Text;
-                cmd.ExecuteNonQuery();
-                koneksi.Close();
-                MessageBox.Show("Hapus Data Berhasil");
-                dataGridView();
-                refreshform();
+                MessageBox.Show("Pilih baris data yang akan dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dataGridView1.SelectedRows[0].Cells["Id_Anggota"].Value.ToString();
+
+            string sql = "DELETE FROM Anggota WHERE Id_Anggota = @Id_Anggota";
+            using (SqlCommand command = new SqlCommand(sql, koneksi))
+            {
+                command.Parameters.AddWithValue("@ID_Anggota", id);
+
+                try
+                {
+                    koneksi.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        koneksi.Close();
+                        refreshform();
+                        dataGridView();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -196,6 +218,13 @@ namespace testuidoang
         {
             dataGridView();
             btnOpen.Enabled = false;
+        }
+
+        private void AdmnAnggota_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'perpustakaanDataSet.Anggota' table. You can move, or remove it, as needed.
+            this.anggotaTableAdapter.Fill(this.perpustakaanDataSet.Anggota);
+
         }
     }
 }
