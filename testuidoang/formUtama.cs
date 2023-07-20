@@ -48,10 +48,10 @@ namespace testuidoang
             string username, password;
             username = Username.Text;
             password = Password.Text;
-            SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-C3M8HP9E\KURANGTAU;Initial Catalog=final;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-C3M8HP9E\KURANGTAU;Initial Catalog=Perpustakaan;Integrated Security=True");
             try
             {
-                string strkoneksi = "data source = LAPTOP-C3M8HP9E\\KURANGTAU;initial catalog = final;user ID = {0}; password = {1}";
+                string strkoneksi = "data source = LAPTOP-C3M8HP9E\\KURANGTAU;initial catalog = Perpustakaan;user ID = {0}; password = {1}";
                 conn = new SqlConnection(string.Format(strkoneksi, username, password));
                 conn.Open();
 
