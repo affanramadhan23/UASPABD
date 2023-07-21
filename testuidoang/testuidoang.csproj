@@ -95,6 +95,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rak.Designer.cs">
+      <DependentUpon>Rak.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdmnAnggota.resx">
       <DependentUpon>AdmnAnggota.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +132,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Rak.resx">
+      <DependentUpon>Rak.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="PerpustakaanDataSet.xsc">
       <DependentUpon>PerpustakaanDataSet.xsd</DependentUpon>
     </None>

@@ -34,6 +34,7 @@
             this.btnBuku = new System.Windows.Forms.Button();
             this.btnPegawai = new System.Windows.Forms.Button();
             this.btnPenerbit = new System.Windows.Forms.Button();
+            this.btnRak = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -50,7 +51,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(9, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 1;
@@ -99,19 +100,30 @@
             this.btnPenerbit.UseVisualStyleBackColor = true;
             this.btnPenerbit.Click += new System.EventHandler(this.btnPenerbit_Click);
             // 
+            // btnRak
+            // 
+            this.btnRak.Location = new System.Drawing.Point(370, 193);
+            this.btnRak.Name = "btnRak";
+            this.btnRak.Size = new System.Drawing.Size(146, 45);
+            this.btnRak.TabIndex = 6;
+            this.btnRak.Text = "Rak";
+            this.btnRak.UseVisualStyleBackColor = true;
+            this.btnRak.Click += new System.EventHandler(this.button3_Click);
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.btnRak);
             this.Controls.Add(this.btnPenerbit);
             this.Controls.Add(this.btnPegawai);
             this.Controls.Add(this.btnBuku);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAdmin";
             this.Text = "Hello Admin";
             this.Load += new System.EventHandler(this.FormAdmin_Load);
@@ -128,5 +140,6 @@
         private System.Windows.Forms.Button btnBuku;
         private System.Windows.Forms.Button btnPegawai;
         private System.Windows.Forms.Button btnPenerbit;
+        private System.Windows.Forms.Button btnRak;
     }
 }
