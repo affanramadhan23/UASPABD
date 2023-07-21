@@ -82,6 +82,12 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Penerbit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penerbit.Designer.cs">
+      <DependentUpon>Penerbit.cs</DependentUpon>
+    </Compile>
     <Compile Include="PerpustakaanDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penerbit.resx">
+      <DependentUpon>Penerbit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

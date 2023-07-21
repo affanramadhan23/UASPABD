@@ -49,5 +49,12 @@ namespace testuidoang
             fpe.Show();
             this.Hide();
         }
+
+        private void btnPenerbit_Click(object sender, EventArgs e)
+        {
+            Penerbit pnbt = new Penerbit();
+            pnbt.Show();
+            this.Hide();
+        }
     }
 }
